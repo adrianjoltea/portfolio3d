@@ -1,4 +1,4 @@
-// import image from "/LinkedIn3.png";
+import image from "/LinkedIn3.png";
 import "./Welcome.css";
 
 import AnimatedText from "../../components/AnimatedText";
@@ -24,7 +24,9 @@ function Welcome({ screenRef, setMonitor }) {
         </p>
       </div>
 
-      <div className="hero-img">{/* <img src={image} alt="profile" /> */}</div>
+      <div className="hero-img">
+        <img src={image} alt="profile" />
+      </div>
     </section>
   );
 }

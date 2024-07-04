@@ -81,6 +81,6 @@ html {
 .screen-content {
   width: 1320px;
   height: 660px;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: var(--color-dark-tertiary);
 }
