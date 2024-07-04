@@ -1,10 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import { Canvas } from "@react-three/fiber";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const cameraSetting = {
+  fov: 30,
+  position: [0, 1, 15],
+};
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <Canvas dpr={[1, 2]} camera={cameraSetting} gl={{ antialias: true }} linear>
+      <App />
+    </Canvas>
+  </React.StrictMode>
+);
