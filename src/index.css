@@ -79,10 +79,8 @@ html {
 }
 
 .screen-content {
-  width: 1205px;
-  height: 680px;
-  margin-left: 5px;
-  margin-bottom: 15px;
-  color: white;
-  background-color: var(--color-dark-tertiary);
+  width: 1320px;
+  height: 660px;
+  color: black;
+  background-color: white;
 }
