@@ -8,7 +8,7 @@ import { Canvas } from "@react-three/fiber";
 
 const cameraSetting = {
   fov: 50,
-  position: [0, 0.5, 3],
+  position: [0, 0.5, 4],
 };
 
 ReactDOM.createRoot(document.getElementById("root")).render(

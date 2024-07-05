@@ -8,11 +8,15 @@ import { useFrame } from "@react-three/fiber";
 import Welcome from "../features/welcome/Welcome";
 import About from "../features/about/About";
 import Projects from "../features/projects/Projects";
+import Start from "../features/start/Start";
+import useKeydown from "../hooks/useKeydown";
 
 export function Model(props) {
   const { nodes, materials } = useGLTF("/Desk.glb");
   const [activeScreen, setActiveScreen] = useState();
+  const [startScreen, setStartScreen] = useState(true);
   const [active, setActive] = useState(false);
+  const [notification, setNotification] = useState(true);
   const cameraRef = useRef();
   const RightMonitorScreen = useRef();
   const MiddleMonitorScreen = useRef();
@@ -32,32 +36,14 @@ export function Model(props) {
       return;
     } else {
       cameraRef.current?.fitToSphere(activeScreen, true);
-
-      // const onRest = () => {
-      //   if (cameraRef.current) {
-      //     cameraRef.current.enabled = false;
-      //     cameraRef.current.removeEventListener("rest", onRest);
-      //   }
-      // };
-      // cameraRef.current.addEventListener("rest", onRest);
     }
   }, [activeScreen]);
 
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        cameraRef.current?.reset(true);
-        setActive(false);
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
+  useKeydown("Escape", () => {
+    cameraRef.current?.reset(true);
+    setNotification(false);
+    setActive(false);
+  });
   return (
     <>
       <CameraControls
@@ -192,10 +178,16 @@ export function Model(props) {
               occlude
               scale={0.08}
             >
-              <Welcome
-                setMonitor={setMonitor}
-                screenRef={MiddleMonitorScreen}
-              />
+              {startScreen ? (
+                <Start setStartScreen={setStartScreen} />
+              ) : (
+                <Welcome
+                  setMonitor={setMonitor}
+                  screenRef={MiddleMonitorScreen}
+                  setNotification={setNotification}
+                  notification={notification}
+                />
+              )}
             </Html>
           </mesh>
           <group
@@ -237,7 +229,11 @@ export function Model(props) {
               occlude
               scale={0.08}
             >
-              <About setMonitor={setMonitor} screenRef={RightMonitorScreen} />
+              {startScreen ? (
+                <></>
+              ) : (
+                <About setMonitor={setMonitor} screenRef={RightMonitorScreen} />
+              )}
             </Html>
           </mesh>
           <group
@@ -279,7 +275,14 @@ export function Model(props) {
               occlude
               scale={0.08}
             >
-              <Projects setMonitor={setMonitor} screenRef={LeftMonitorScreen} />
+              {startScreen ? (
+                <></>
+              ) : (
+                <Projects
+                  setMonitor={setMonitor}
+                  screenRef={LeftMonitorScreen}
+                />
+              )}
             </Html>
           </mesh>
           <mesh
