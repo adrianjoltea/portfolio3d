@@ -1,9 +1,10 @@
-import { Center, OrbitControls, useHelper } from "@react-three/drei";
+import { Center, useHelper } from "@react-three/drei";
 
 import { Perf } from "r3f-perf";
 import { useRef } from "react";
 import { DirectionalLightHelper } from "three";
 import { Model } from "./components/Desk";
+import { LIGHT_COLOR } from "./common/colors";
 
 function App() {
   const directionalRef = useRef();
@@ -23,12 +24,12 @@ function App() {
       <directionalLight
         intensity={10}
         position={[0, 1, 4]}
-        color={"#280137"}
+        color={LIGHT_COLOR}
         ref={directionalLight2}
         castShadow
       />
-      <directionalLight intensity={4} color={"#280137"} />
-      <directionalLight intensity={4} color={"#280137"} />
+      <directionalLight intensity={4} color={LIGHT_COLOR} />
+      <directionalLight intensity={4} color={LIGHT_COLOR} />
       <directionalLight intensity={2} position={[0, 4, 20]} />
       <Center>
         <Model />

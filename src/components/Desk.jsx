@@ -62,11 +62,11 @@ export function Model(props) {
     <>
       <CameraControls
         minDistance={3}
-        maxDistance={14}
+        maxDistance={5}
         minPolarAngle={Math.PI / 2.5}
         maxPolarAngle={Math.PI / 2}
-        minAzimuthAngle={-Math.PI / 6}
-        maxAzimuthAngle={Math.PI / 6}
+        minAzimuthAngle={-Math.PI / 9}
+        maxAzimuthAngle={Math.PI / 9}
         ref={cameraRef}
       />
       <group {...props} dispose={null}>

@@ -7,7 +7,7 @@ import "./styles/mainCss.jsx";
 import { Canvas } from "@react-three/fiber";
 
 const cameraSetting = {
-  fov: 65,
+  fov: 50,
   position: [0, 0.5, 3],
 };
 
