@@ -3,10 +3,21 @@ import "./About.css";
 import { SVGS } from "./svgs";
 import { motion } from "framer-motion";
 
+const DURATION_IN_SEC_FOR_SKILLS = 1;
+const DISTANCE_IN_PX_FOR_SKILLS = -50;
+const ROTATION_IN_ANGLES = 30;
+const DURATION_IN_SEC_FOR_TEXT = 2;
+const DISTANCE_IN_PX_FOR_TEXT = 400;
+const DELAY_IN_SEC = 0.1;
+
 const motionConfig = {
-  initial: { opacity: 0, x: -50 },
-  whileInView: { opacity: 1, x: 0 },
-  transition: { duration: 1 },
+  initial: {
+    opacity: 0,
+    x: DISTANCE_IN_PX_FOR_SKILLS,
+    rotate: ROTATION_IN_ANGLES,
+  },
+  whileInView: { opacity: 1, x: 0, rotate: 0 },
+  transition: { duration: DURATION_IN_SEC_FOR_SKILLS },
 };
 
 function About({ screenRef, setMonitor }) {
@@ -26,7 +37,10 @@ function About({ screenRef, setMonitor }) {
                 key={i}
                 initial={motionConfig.initial}
                 whileInView={motionConfig.whileInView}
-                transition={{ ...motionConfig.transition, delay: i * 0.1 }}
+                transition={{
+                  ...motionConfig.transition,
+                  delay: i * DELAY_IN_SEC,
+                }}
                 viewport={{ root: skills }}
               >
                 {React.createElement(svg)}
@@ -36,9 +50,9 @@ function About({ screenRef, setMonitor }) {
         </div>
         <motion.div
           className="about-text"
-          initial={{ x: 400, opacity: 0 }}
+          initial={{ x: DISTANCE_IN_PX_FOR_TEXT, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: DURATION_IN_SEC_FOR_TEXT }}
         >
           <motion.div>
             <h4 className="title-h4">About me</h4>

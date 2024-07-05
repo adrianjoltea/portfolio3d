@@ -3,13 +3,17 @@ import { FaCode, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import isOdd from "../../lib/isOdd";
 
+const DURATION_IN_SEC = 1.5;
+const DISTANCE_IN_PX = 500;
+const DELAY_IN_SEC = 0.1;
+
 function Project({ img, title, text, githubLink, liveLink, i }) {
-  const direction = isOdd(i) ? 500 : -500;
+  const direction = isOdd(i) ? DISTANCE_IN_PX : -DISTANCE_IN_PX;
 
   const motionConfig = {
     initial: { opacity: 0, x: direction },
     whileInView: { opacity: 1, x: 0 },
-    transition: { duration: 1.5 },
+    transition: { duration: DURATION_IN_SEC },
   };
 
   return (
@@ -17,7 +21,7 @@ function Project({ img, title, text, githubLink, liveLink, i }) {
       className="project-container-1"
       initial={motionConfig.initial}
       whileInView={motionConfig.whileInView}
-      transition={{ ...motionConfig.transition, delay: i * 0.1 }}
+      transition={{ ...motionConfig.transition, delay: i * DELAY_IN_SEC }}
     >
       <div className="image-position">
         <div className="image-project">

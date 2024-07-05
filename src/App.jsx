@@ -25,7 +25,6 @@ function App() {
         intensity={10}
         position={[0, 1, 4]}
         color={LIGHT_COLOR}
-        ref={directionalLight2}
         castShadow
       />
       <directionalLight intensity={4} color={LIGHT_COLOR} />
