@@ -1,9 +1,24 @@
 import React from "react";
 import { FaCode, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
+import isOdd from "../../lib/isOdd";
 
-function Project({ img, title, text, githubLink, liveLink }) {
+function Project({ img, title, text, githubLink, liveLink, i }) {
+  const direction = isOdd(i) ? 500 : -500;
+
+  const motionConfig = {
+    initial: { opacity: 0, x: direction },
+    whileInView: { opacity: 1, x: 0 },
+    transition: { duration: 1.5 },
+  };
+
   return (
-    <div className="project-container-1 animation">
+    <motion.div
+      className="project-container-1"
+      initial={motionConfig.initial}
+      whileInView={motionConfig.whileInView}
+      transition={{ ...motionConfig.transition, delay: i * 0.1 }}
+    >
       <div className="image-position">
         <div className="image-project">
           <img src={img} />
@@ -38,7 +53,7 @@ function Project({ img, title, text, githubLink, liveLink }) {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -68,7 +68,7 @@ function Projects({ screenRef, setMonitor }) {
           My <span className="text-color">Projects</span>
         </h2>
         <div className="projects-container-1">
-          {currentProjects.map((project) => (
+          {currentProjects.map((project, i) => (
             <Project
               key={project.title}
               text={project.text}
@@ -76,6 +76,7 @@ function Projects({ screenRef, setMonitor }) {
               githubLink={project.githubLink}
               liveLink={project.liveLink}
               img={project.img}
+              i={i}
             />
           ))}
         </div>
