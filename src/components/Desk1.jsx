@@ -9,7 +9,7 @@ import useKeydown from "../hooks/useKeydown";
 import Info from "../features/Info/Info";
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("/Desk1.glb");
+  const { nodes, materials } = useGLTF("/Desk.glb");
   const [activeScreen, setActiveScreen] = useState();
   const [startScreen, setStartScreen] = useState(true);
   const [active, setActive] = useState(false);
@@ -295,7 +295,6 @@ export function Model(props) {
             name="MonitorFrame004"
             position={[-0.013, 2.277, -3.496]}
             rotation={[0.856, -Math.PI / 2, 0]}
-            scale={[0.4, 0.852, 0.982]}
           >
             <mesh
               name="Plane003"
@@ -320,7 +319,6 @@ export function Model(props) {
             material={materials["Material.010"]}
             position={[-0.013, 2.277, -3.488]}
             rotation={[0.856, -Math.PI / 2, 0]}
-            scale={[0.408, 0.868, 1]}
             ref={BottomMonitorScreen}
           >
             <Html
@@ -463,26 +461,15 @@ export function Model(props) {
               material={materials.MouseBody}
             />
           </group>
-          <group
+          <mesh
             name="MouseTop"
+            castShadow
+            receiveShadow
+            geometry={nodes.MouseTop.geometry}
+            material={materials.MouseTop}
             position={[1.135, 2.042, -2.8]}
             rotation={[Math.PI, 0, Math.PI]}
-          >
-            <mesh
-              name="Cube002"
-              castShadow
-              receiveShadow
-              geometry={nodes.Cube002.geometry}
-              material={materials.MouseTop}
-            />
-            <mesh
-              name="Cube002_1"
-              castShadow
-              receiveShadow
-              geometry={nodes.Cube002_1.geometry}
-              material={materials.MouseTop}
-            />
-          </group>
+          />
           <mesh
             name="ScrollWheel"
             castShadow
@@ -659,4 +646,4 @@ export function Model(props) {
   );
 }
 
-useGLTF.preload("/Desk1.glb");
+useGLTF.preload("/Desk.glb");

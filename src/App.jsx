@@ -3,7 +3,7 @@ import { Center, useHelper } from "@react-three/drei";
 import { Perf } from "r3f-perf";
 import { useRef } from "react";
 import { DirectionalLightHelper } from "three";
-import { Model } from "./components/Desk";
+import { Model } from "./components/Desk1";
 import { LIGHT_COLOR } from "./common/colors";
 
 function App() {

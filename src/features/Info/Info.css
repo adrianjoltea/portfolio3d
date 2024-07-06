@@ -1,7 +1,28 @@
 .small-screen-content {
   width: 1320px;
-  height: 620px;
+  height: 240px;
   color: white;
   background-color: var(--color-dark-tertiary);
   overflow: hidden;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  p {
+    font-size: 3.5rem;
+  }
+
+  a {
+    color: inherit;
+    font-size: 7rem;
+  }
 }
