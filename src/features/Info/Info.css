@@ -1,0 +1,7 @@
+.small-screen-content {
+  width: 1320px;
+  height: 620px;
+  color: white;
+  background-color: var(--color-dark-tertiary);
+  overflow: hidden;
+}
