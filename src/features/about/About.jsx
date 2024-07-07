@@ -23,10 +23,14 @@ const motionConfig = {
 function About({ screenRef, setMonitor }) {
   const skills = useRef();
 
+  function setMonitorIfDesktop() {
+    screenRef && setMonitor(screenRef);
+  }
+
   return (
     <section
-      className="about screen-content"
-      onClick={() => setMonitor(screenRef)}
+      className={`about ${screenRef && "screen-content"}`}
+      onClick={() => setMonitorIfDesktop()}
     >
       <div className="about-container">
         <div className="about-skills">

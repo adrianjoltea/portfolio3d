@@ -2,10 +2,13 @@ import React from "react";
 import "./Info.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 function Info({ screenRef, setMonitor }) {
+  function setMonitorIfDesktop() {
+    screenRef && setMonitor(screenRef);
+  }
   return (
     <section
-      className="info small-screen-content"
-      onClick={() => setMonitor(screenRef)}
+      className={`info ${screenRef && "small-screen-content"}`}
+      onClick={() => setMonitorIfDesktop}
     >
       <div className="info-container">
         <a

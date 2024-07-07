@@ -58,10 +58,14 @@ function Projects({ screenRef, setMonitor }) {
     currentPage * PROJECTS_PER_PAGE
   );
 
+  function setMonitorIfDesktop() {
+    screenRef && setMonitor(screenRef);
+  }
+
   return (
     <section
-      className="projects screen-content"
-      onClick={() => setMonitor(screenRef)}
+      className={`projects ${screenRef && "screen-content"}`}
+      onClick={() => setMonitorIfDesktop}
     >
       <div className="projects-container">
         <h2 className="title-h2">

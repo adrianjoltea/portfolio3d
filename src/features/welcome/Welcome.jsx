@@ -5,11 +5,14 @@ import AnimatedText from "../../components/AnimatedText";
 import Notification from "../../components/Notification";
 
 function Welcome({ screenRef, setMonitor, notification, setNotification }) {
+  function setMonitorIfDesktop() {
+    screenRef && setMonitor(screenRef);
+  }
   return (
     <>
       <section
-        className="welcome screen-content"
-        onClick={() => setMonitor(screenRef)}
+        className={`welcome ${screenRef && "screen-content"}`}
+        onClick={() => setMonitorIfDesktop()}
       >
         {notification && <Notification setNotification={setNotification} />}
         <div className="hero-text">
