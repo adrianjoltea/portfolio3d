@@ -68,8 +68,6 @@ export function Model(props) {
             receiveShadow
             geometry={nodes.WallDecoration.geometry}
             material={materials["Material.013"]}
-            position={[0.003, 3.814, -4.175]}
-            rotation={[Math.PI / 2, 0, 0]}
           />
           <mesh
             name="MousePad"
@@ -88,6 +86,55 @@ export function Model(props) {
             position={[-0.995, 4.916, -3.884]}
             rotation={[Math.PI / 2, 0, 0]}
           />
+          <group
+            name="Car"
+            position={[2.69, 2.062, -2.852]}
+            rotation={[0, -0.932, -Math.PI / 2]}
+            scale={0.167}
+          >
+            <mesh
+              name="Circle002"
+              castShadow
+              receiveShadow
+              geometry={nodes.Circle002.geometry}
+              material={materials.Glass}
+            />
+            <mesh
+              name="Circle002_1"
+              castShadow
+              receiveShadow
+              geometry={nodes.Circle002_1.geometry}
+              material={materials.Body}
+            />
+            <mesh
+              name="Circle002_2"
+              castShadow
+              receiveShadow
+              geometry={nodes.Circle002_2.geometry}
+              material={materials.TailWhite}
+            />
+            <mesh
+              name="Circle002_3"
+              castShadow
+              receiveShadow
+              geometry={nodes.Circle002_3.geometry}
+              material={materials.Blinker}
+            />
+            <mesh
+              name="Circle002_4"
+              castShadow
+              receiveShadow
+              geometry={nodes.Circle002_4.geometry}
+              material={materials.TailRed}
+            />
+            <mesh
+              name="Circle002_5"
+              castShadow
+              receiveShadow
+              geometry={nodes.Circle002_5.geometry}
+              material={materials.BodyPaintAccent}
+            />
+          </group>
           <group
             name="Drawer"
             position={[-3.139, 0, -2.975]}
@@ -293,21 +340,21 @@ export function Model(props) {
           />
           <group
             name="MonitorFrame004"
-            position={[-0.013, 2.277, -3.496]}
-            rotation={[0.856, -Math.PI / 2, 0]}
+            position={[-0.003, 2.264, -3.611]}
+            rotation={[1.069, -1.571, 0]}
           >
             <mesh
-              name="Plane003"
+              name="Plane018"
               castShadow
               receiveShadow
-              geometry={nodes.Plane003.geometry}
+              geometry={nodes.Plane018.geometry}
               material={materials["Material.009"]}
             />
             <mesh
-              name="Plane003_1"
+              name="Plane018_1"
               castShadow
               receiveShadow
-              geometry={nodes.Plane003_1.geometry}
+              geometry={nodes.Plane018_1.geometry}
               material={materials["Material.010"]}
             />
           </group>
@@ -317,8 +364,8 @@ export function Model(props) {
             receiveShadow
             geometry={nodes.MonitorScreen003.geometry}
             material={materials["Material.010"]}
-            position={[-0.013, 2.277, -3.488]}
-            rotation={[0.856, -Math.PI / 2, 0]}
+            position={[-0.003, 2.264, -3.603]}
+            rotation={[1.069, -1.571, 0]}
             ref={BottomMonitorScreen}
           >
             <Html
@@ -441,35 +488,35 @@ export function Model(props) {
               material={materials.KeyboardKey}
             />
           </group>
-          <group
+          <mesh
             name="MouseBody"
+            castShadow
+            receiveShadow
+            geometry={nodes.MouseBody.geometry}
+            material={materials.MouseBody}
             position={[1.135, 2.049, -2.8]}
+            rotation={[Math.PI, 0, Math.PI]}
+          />
+          <group
+            name="MouseTop"
+            position={[1.135, 2.042, -2.8]}
             rotation={[Math.PI, 0, Math.PI]}
           >
             <mesh
-              name="Cube_1"
+              name="Cube002"
               castShadow
               receiveShadow
-              geometry={nodes.Cube_1.geometry}
-              material={materials.MouseBody}
+              geometry={nodes.Cube002.geometry}
+              material={materials.MouseTop}
             />
             <mesh
-              name="Cube_2"
+              name="Cube002_1"
               castShadow
               receiveShadow
-              geometry={nodes.Cube_2.geometry}
-              material={materials.MouseBody}
+              geometry={nodes.Cube002_1.geometry}
+              material={materials.MouseTop}
             />
           </group>
-          <mesh
-            name="MouseTop"
-            castShadow
-            receiveShadow
-            geometry={nodes.MouseTop.geometry}
-            material={materials.MouseTop}
-            position={[1.135, 2.042, -2.8]}
-            rotation={[Math.PI, 0, Math.PI]}
-          />
           <mesh
             name="ScrollWheel"
             castShadow

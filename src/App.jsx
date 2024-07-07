@@ -1,9 +1,9 @@
-import { Center, useHelper } from "@react-three/drei";
+import { Center, OrbitControls, useHelper } from "@react-three/drei";
 
 import { Perf } from "r3f-perf";
 import { useRef } from "react";
 import { DirectionalLightHelper } from "three";
-import { Model } from "./components/Desk1";
+import { Model } from "./components/Desk";
 import { LIGHT_COLOR } from "./common/colors";
 
 function App() {
