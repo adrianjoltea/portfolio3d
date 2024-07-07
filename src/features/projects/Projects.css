@@ -9,12 +9,18 @@
 }
 .projects-container-1 {
   height: 45rem;
+  @media (max-width: 900px) {
+    height: auto;
+  }
 }
 .project-container-1 {
   margin-top: 2rem;
   display: flex;
   align-items: center;
   gap: 10rem;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 .image-position {

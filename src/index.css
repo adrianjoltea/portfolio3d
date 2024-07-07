@@ -74,6 +74,7 @@ body,
 
   @media (max-width: 900px) {
     overflow: auto;
+    overflow-x: hidden;
     color: white;
     background-color: var(--color-dark-tertiary);
   }

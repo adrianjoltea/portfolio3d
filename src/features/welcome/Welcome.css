@@ -3,8 +3,14 @@
 
   justify-content: space-around;
   align-items: center;
-  padding-inline: 50px;
+  padding-inline: 5rem;
   font-weight: 1000;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 10rem;
+  }
 }
 
 .hero-text {

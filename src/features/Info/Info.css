@@ -17,12 +17,23 @@
   display: flex;
   justify-content: space-between;
   width: 80%;
+  @media (max-width: 900px) {
+    width: 100%;
+    justify-content: center;
+    gap: 3rem;
+  }
   p {
     font-size: 3.5rem;
+    @media (max-width: 900px) {
+      font-size: 2rem;
+    }
   }
 
   a {
     color: inherit;
     font-size: 7rem;
+    @media (max-width: 900px) {
+      font-size: 4rem;
+    }
   }
 }
