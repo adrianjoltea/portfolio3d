@@ -16,7 +16,7 @@ function LayoutDesktop() {
     <Canvas dpr={[1, 2]} camera={cameraSetting} shadows linear>
       <ambientLight intensity={0.5} />
 
-      {/* <Perf /> */}
+      <Perf />
       <directionalLight
         intensity={10}
         position={[0, 1, 4]}
