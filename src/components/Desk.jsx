@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { CameraControls, Html, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import Welcome from "../features/welcome/Welcome";
@@ -101,10 +101,11 @@ export function Model(props) {
             castShadow
             receiveShadow
             geometry={nodes.Text.geometry}
-            material={materials.Text}
             position={[-0.995, 4.916, -3.884]}
             rotation={[Math.PI / 2, 0, 0]}
-          />
+          >
+            <meshStandardMaterial color={"#9d7af0"} />
+          </mesh>
           <group
             name="Car"
             position={[2.69, 2.062, -2.852]}
