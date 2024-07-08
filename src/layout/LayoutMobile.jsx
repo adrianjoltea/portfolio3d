@@ -7,10 +7,12 @@ import "./LayoutMobile.css";
 
 function LayoutMobile() {
   return (
-    <main className="app-layout">
-      <Welcome />
-      <About />
-      <Projects />
+    <main>
+      <section className="app-layout">
+        <Welcome />
+        <About />
+        <Projects />
+      </section>
       <Info />
     </main>
   );
