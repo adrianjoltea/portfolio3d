@@ -3,4 +3,10 @@
   display: flex;
   flex-direction: column;
   gap: 10rem;
+  background: linear-gradient(
+    120deg,
+    rgba(36, 38, 32, 1) 0%,
+    rgba(55, 59, 65, 1) 50%,
+    rgba(36, 38, 32, 1) 100%
+  );
 }
