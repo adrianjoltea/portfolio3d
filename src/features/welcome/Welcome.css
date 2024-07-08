@@ -21,15 +21,15 @@
   gap: 10px;
 
   h4 {
-    font-size: clamp(2rem, 3vw, var(--h4-size));
+    font-size: clamp(2.5rem, 3vw, var(--h4-size));
     font-weight: 900;
   }
   h1 {
-    font-size: clamp(3rem, 4vw, var(--h1-size));
+    font-size: clamp(3.5rem, 4vw, var(--h1-size));
     font-weight: 800;
   }
   p {
-    font-size: clamp(1.5rem, 3vw, var(--p-size));
+    font-size: clamp(1.8rem, 3vw, var(--p-size));
   }
 }
 .hero-img {
