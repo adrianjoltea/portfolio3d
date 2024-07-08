@@ -7,7 +7,7 @@ const DURATION_IN_SEC_FOR_SKILLS = 1;
 const DISTANCE_IN_PX_FOR_SKILLS = -50;
 const ROTATION_IN_ANGLES = 30;
 const DURATION_IN_SEC_FOR_TEXT = 2;
-const DISTANCE_IN_PX_FOR_TEXT = 400;
+const DISTANCE_IN_PX_FOR_TEXT = 250;
 const DELAY_IN_SEC = 0.1;
 
 const motionConfig = {
@@ -22,6 +22,7 @@ const motionConfig = {
 
 function About({ screenRef, setMonitor }) {
   const skills = useRef();
+  const title = useRef();
 
   function setMonitorIfDesktop() {
     screenRef && setMonitor(screenRef);
@@ -52,29 +53,29 @@ function About({ screenRef, setMonitor }) {
             ))}
           </motion.ul>
         </div>
-        <motion.div
-          className="about-text"
-          initial={{ x: DISTANCE_IN_PX_FOR_TEXT, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: DURATION_IN_SEC_FOR_TEXT }}
-        >
-          <motion.div>
-            <h4 className="title-h4">
-              About <span className="text-color">me</span>
-            </h4>
+        <motion.div className="about-text" ref={title}>
+          <h4 className="title-h4">
+            About <span className="text-color">me</span>
+          </h4>
+          <motion.div
+            initial={{ x: DISTANCE_IN_PX_FOR_TEXT, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: DURATION_IN_SEC_FOR_TEXT }}
+            viewport={{ root: title }}
+          >
+            <motion.p>
+              Hi, I&apos;m a passionate and detail-oriented junior React
+              developer with a strong foundation in front-end web development.
+              My journey into the world of coding began with a fascination for
+              creating engaging and interactive user interfaces.
+            </motion.p>
+            <motion.p>
+              I am enthusiastic about staying up-to-date with the latest
+              industry trends and technologies. Eager to contribute my skills
+              and learn from experienced developers to grow as a professional in
+              the ever-evolving field of web development.
+            </motion.p>
           </motion.div>
-          <motion.p>
-            Hi, I&apos;m a passionate and detail-oriented junior React developer
-            with a strong foundation in front-end web development. My journey
-            into the world of coding began with a fascination for creating
-            engaging and interactive user interfaces.
-          </motion.p>
-          <motion.p>
-            I am enthusiastic about staying up-to-date with the latest industry
-            trends and technologies. Eager to contribute my skills and learn
-            from experienced developers to grow as a professional in the
-            ever-evolving field of web development.
-          </motion.p>
         </motion.div>
       </div>
     </section>

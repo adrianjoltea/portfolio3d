@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import isOdd from "../../lib/isOdd";
 
 const DURATION_IN_SEC = 1.5;
-const DISTANCE_IN_PX = 500;
+const DISTANCE_IN_PX = 300;
 const DELAY_IN_SEC = 0.1;
 
 function Project({ img, title, text, githubLink, liveLink, i }) {
