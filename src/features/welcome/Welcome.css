@@ -6,6 +6,13 @@
   padding-inline: 5rem;
   font-weight: 1000;
 
+  background: linear-gradient(
+    172deg,
+    rgba(36, 38, 32, 1) 0%,
+    rgba(55, 59, 65, 1) 50%,
+    rgba(36, 38, 32, 1) 100%
+  );
+
   @media (max-width: 900px) {
     flex-direction: column;
     gap: 5rem;

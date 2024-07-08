@@ -88,6 +88,5 @@ html {
   width: 1320px;
   height: 660px;
   color: white;
-  background-color: var(--color-dark-tertiary);
   overflow: hidden;
 }
