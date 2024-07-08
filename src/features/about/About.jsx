@@ -59,10 +59,9 @@ function About({ screenRef, setMonitor }) {
           transition={{ duration: DURATION_IN_SEC_FOR_TEXT }}
         >
           <motion.div>
-            <h4 className="title-h4">About me</h4>
-            <h2 className="title-h2">
-              Adrian <span className="text-color">Joltea</span>
-            </h2>
+            <h4 className="title-h4">
+              About <span className="text-color">me</span>
+            </h4>
           </motion.div>
           <motion.p>
             Hi, I&apos;m a passionate and detail-oriented junior React developer

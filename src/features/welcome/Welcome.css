@@ -10,6 +10,8 @@
     flex-direction: column;
     gap: 5rem;
     margin-top: 10rem;
+    padding: 0;
+    align-items: start;
   }
 }
 
@@ -19,15 +21,15 @@
   gap: 10px;
 
   h4 {
-    font-size: var(--h4-size);
+    font-size: clamp(2rem, 3vw, var(--h4-size));
     font-weight: 900;
   }
   h1 {
-    font-size: var(--h1-size);
+    font-size: clamp(3rem, 4vw, var(--h1-size));
     font-weight: 800;
   }
   p {
-    font-size: var(--p-size);
+    font-size: clamp(1.5rem, 3vw, var(--p-size));
   }
 }
 .hero-img {
@@ -35,6 +37,9 @@
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   overflow: hidden;
   animation: morph 5s linear infinite;
+  @media (max-width: 900px) {
+    margin: 0 auto;
+  }
 }
 
 @keyframes morph {

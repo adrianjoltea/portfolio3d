@@ -9,11 +9,11 @@
 }
 
 .title-h2 {
-  font-size: var(--h2-size);
+  font-size: clamp(2rem, 5vw, var(--h2-size));
   color: inherit;
   margin-top: 2rem;
 }
 .title-h4 {
-  font-size: var(--h4-size);
+  font-size: clamp(1.5rem, 5vw, var(--h4-size));
   color: inherit;
 }

@@ -8,7 +8,7 @@ function Info({ screenRef, setMonitor }) {
   return (
     <section
       className={`info ${screenRef && "small-screen-content"}`}
-      onClick={() => setMonitorIfDesktop}
+      onClick={() => setMonitorIfDesktop()}
     >
       <div className="info-container">
         <a

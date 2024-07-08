@@ -1,0 +1,6 @@
+.app-layout {
+  padding-inline: clamp(1rem, 5vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
