@@ -42,6 +42,25 @@ export function Model(props) {
     setNotification(false);
     setActive(false);
   });
+
+  useKeydown("Enter", () => {
+    setStartScreen(false);
+  });
+
+  const handleKeydown = (key, screenRef) => {
+    useKeydown(key, () => {
+      setActiveScreen(screenRef.current);
+      setActive(true);
+      if (cameraRef.current) {
+        cameraRef.current.enabled = true;
+      }
+    });
+  };
+
+  handleKeydown("1", LeftMonitorScreen);
+  handleKeydown("2", MiddleMonitorScreen);
+  handleKeydown("3", RightMonitorScreen);
+  handleKeydown("4", BottomMonitorScreen);
   return (
     <>
       <CameraControls
