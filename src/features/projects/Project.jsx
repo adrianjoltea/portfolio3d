@@ -28,7 +28,7 @@ function Project({ img, title, text, githubLink, liveLink, i }) {
           <img src={img} />
         </div>
       </div>
-      <div>
+      <div className="content">
         <h5 className="title">{title}</h5>
         <p className="text">{text}</p>
 

@@ -4,6 +4,7 @@ import Project from "./Project";
 import Img1 from "/project-1.jpg";
 import Img2 from "/project-2.png";
 import Img3 from "/project-3.png";
+import Img4 from "/project-4.png";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const PROJECTS_PER_PAGE = 2;
@@ -29,6 +30,13 @@ const PROJECTS = [
     githubLink: "https://github.com/adrianjoltea/car-rental",
     liveLink: "https://car-rental-joltea.netlify.app",
     img: Img1,
+  },
+  {
+    title: "Sip&Play",
+    text: "Website made during a 24h hackathon that contains 3d content ",
+    githubLink: "https://github.com/Prometheus-Spark/hackathon-2024",
+    liveLink: "https://sip-n-play-nyc.vercel.app",
+    img: Img4,
   },
 ];
 

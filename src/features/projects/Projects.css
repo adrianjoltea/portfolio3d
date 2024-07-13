@@ -21,6 +21,9 @@
 }
 .projects-container-1 {
   height: 45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   @media (max-width: 900px) {
     height: auto;
     margin-top: 7rem;
@@ -45,7 +48,7 @@
 }
 
 .image-project {
-  max-width: 28rem;
+  width: clamp(20rem, 30vw, 28rem);
   border: 5px solid white;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -116,4 +119,8 @@
   button:disabled {
     cursor: not-allowed;
   }
+}
+
+.content {
+  width: 100%;
 }
