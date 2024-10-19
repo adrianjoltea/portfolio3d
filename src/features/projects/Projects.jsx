@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import "./Projects.css";
+import { useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Project from "./Project";
+import "./Projects.css";
 import Img1 from "/project-1.jpg";
 import Img2 from "/project-2.png";
 import Img3 from "/project-3.png";
 import Img4 from "/project-4.png";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Img5 from "/project-5.png";
 
 const PROJECTS_PER_PAGE = 2;
 
@@ -16,7 +17,12 @@ const PROJECTS = [
     liveLink: "https://visenna.io",
     img: Img3,
   },
-
+  {
+    title: "App.updates.dev",
+    text: "A full-stack app created for Automated Versioning, Streamline Approvals, and Tailor Changelogs",
+    liveLink: "https://app.updates.dev",
+    img: Img5,
+  },
   {
     title: "Personal Finance",
     text: "A full-stack app created with react for the front-end and nest.js as the backend",
